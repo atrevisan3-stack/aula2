@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<style>
+    body{
+        background-color: green;
+    } 
+
+    input{
+        background-color: aqua;
+        border: 1px solid greenyellow;
+    }
+</style>
+
+<script>
+function kkkk() {
+    let operacao = document.getElementById("operacao").value;
+
+    // Remove todos os espaços
+    operacao = operacao.replace(/\s/g, "");
+    sssssssssss
+
+    console.log('csdhsAAAAAAAAAAAAAAAAAAAAajdhsajd')    
+    let operador;
+
+    if (operacao.includes("+")) {
+        operador = "+";
+    } else if (operacao.includes("-")) {
+        operador = "-";
+    } else if (operacao.includes("*")) {
+        operador = "*";
+    } else if (operacao.includes("/")) {
+        operador = "/";
+    } else {
+        alert("Operação inválida!");
+        return;
+    }
+
+    let dados = operacao.split(operador);
+
+    let num1 = parseFloat(dados[0]);
+    let num2 = parseFloat(dados[1]);
+
+    switch (operador) {
+        case "+":
+            alert(num1 + num2);
+            break;
+        case "-":
+            alert(num1 - num2);
+            break;
+        case "*":
+            alert(num1 * num2);
+            break;
+        case "/":
+            alert(num1 / num2);
+            break;
+    }
+}
+</script>
+
+<body>
+    <div style="align-items: center; text-align: center;">
+        <div>
+            <p>Calculadora</p>
+        </div>
+        <div>
+            <label>Nome</label>
+            <input id="operacao" title="Digite a operação" placeholder="Digite a operação">
+
+        </div>
+        <button onclick=kkkk()>Calcular</button>
+    </div>
+</body>
+</html>
